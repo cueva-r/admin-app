@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-} from '@ant-design/icons';
 
-import { AiOutlineDashboard } from "react-icons/ai";
+import { AiOutlineDashboard, AiOutlinePicLeft, AiOutlinePicRight } from "react-icons/ai";
 import { FaBlogger, FaUsers } from "react-icons/fa";
 import { CiCircleList, CiShoppingCart } from "react-icons/ci";
 import { SiBrandfolder } from "react-icons/si";
@@ -12,6 +8,7 @@ import { BiCategory } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
 import { MdPlaylistAddCheckCircle } from "react-icons/md";
 import { GoQuestion } from "react-icons/go";
+import { IoNotifications } from "react-icons/io5";
 
 import { Layout, Menu, Button, theme } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
@@ -113,7 +110,7 @@ const MainLayouts = () => {
                             label: 'Blog',
                             children: [
                                 {
-                                    key: 'blog',
+                                    key: 'add-blog',
                                     icon: <FaBlogger className='fs-4' />,
                                     label: 'Agregar blog',
                                 },
@@ -144,6 +141,7 @@ const MainLayouts = () => {
             </Sider>
             <Layout>
                 <Header
+                    className='d-flex justify-content-between ps-3 pe-5'
                     style={{
                         padding: 0,
                         background: colorBgContainer,
@@ -151,7 +149,7 @@ const MainLayouts = () => {
                 >
                     <Button
                         type="text"
-                        icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                        icon={collapsed ? <AiOutlinePicRight /> : <AiOutlinePicLeft />}
                         onClick={() => setCollapsed(!collapsed)}
                         style={{
                             fontSize: '16px',
@@ -159,6 +157,26 @@ const MainLayouts = () => {
                             height: 64,
                         }}
                     />
+                    <div className='d-flex gap-3 align-items-center'>
+                        <div className='position-relative'>
+                            <IoNotifications className='fs-5' />
+                            <span className='badge bg-warning rounded-circle p-1 position-absolute'>3</span>
+                        </div>
+                        <div className='d-flex gap-3 align-items-center'>
+                            <div>
+                                <img
+                                    width={32}
+                                    height={32}
+                                    src='https://netstorage-legit.akamaized.net/images/927fd77269c1679f.jpg?imwidth=900'
+                                    alt=''
+                                />
+                            </div>
+                            <div>
+                                <h5 className='mb-0'>Abraham Rico</h5>
+                                <p className='mb-0'>ricoabraham879@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
                 </Header>
                 <Content
                     style={{
