@@ -1,85 +1,44 @@
-body{
-  font-family: "Roboto", sans-serif;
+:root {
+  --color-212529: #212529;
+  --color-ffd333: #ffd333;
+  --color-47ad24: #47ad24;
+  --color-e52e2e: #e52e2e;
+  --color-828599: #828599;
+  --color-3d464d: #ed464d;
+  --color-c3d4da: #ced4da;
 }
 
-.trigger{
-  padding: 0 24px;
-  font-size: 18px;
-  line-height: 64px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.trigger:hover{
-  color: #1890ff;
-}
-
-.demo-logo-vertical{
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.ant-layout{
-  min-height: 100vh;
-}
-
-.ant-layout-sider{
-  flex: 0 0 250px !important;
-  max-width: 250px !important;
-  min-width: 150px !important;
-  width: 250px !important;
-}
-
-.ant-layout-sider-collapsed{
-  flex: 0 0 80px !important;
-  max-width: 80px !important;
-  min-width: 80px !important;
-  width: 80px !important;
-}
-
-.sm-logo{
-  display: none;
-}
-
-.ant-layout-sider-collapsed .sm-logo{
-  display: block;
-  transition: 0.3s;
-}
-.ant-layout-sider-collapsed .lg-logo{
-  display: none;
-  transition: 0.3s;
-}
-
-.demo-logo-vertical{
-  background-color: #ffd333;
-  margin: 0;
-  height: 64px;
-}
-
-main{
-  overflow: scroll;
-}
-
-.ant-menu-content{
-  font-size: 16px;
-}
-
-.ant-layout-header h5{
-  line-height: 30px;
+.green {
+  color: var(--color-47ad24);
   font-size: 14px;
+  font-family: Roboto !important;
+}
+.red {
+  color: var(--color-212529);
+  font-size: 14px;
+  font-family: Roboto !important;
+}
+.quill {
+  background-color: white;
 }
 
-.ant-layout-header p{
-  line-height: 20px;
-  font-size: 13px;
+.form-control {
+  box-shadow: none;
+  border-color: var(--color-c3d4da);
+}
+.title {
+  font: 28px;
+  font-family: Roboto !important;
+  color: var(--color-212529);
 }
 
-.ant-layout-header img {
-  border-radius: 5px;
+.sub-title {
+  font: 24px;
+  font-family: Roboto !important;
+  color: var(--color-212529);
 }
-
-.ant-layout-header div .badge{
-  top: 16px;
-  right: -6px;
+.desc {
+  font: 14px;
+  font-family: Roboto !important;
+  color: var(--color-828599);
 }
